@@ -163,3 +163,43 @@
 61. Nunca usar medias móviles como señal única — requieren confluencia
 62. Los cruces de medias (50/100/200) en diario/semanal detectan cambios de tendencia macro
 63. Hacer backtesting antes de adoptar cualquier configuración de medias móviles
+
+## SP500 Scalping
+64. Confirmar dirección general en 1h/4h antes de buscar entrada en 5min
+65. Esperar pivote y cierre de vela sobre/bajo EMA 12 — nunca anticiparse
+66. Stop Loss en el extremo del pivote con margen para spread
+67. Gestión en dos tramos: 75% a ratio 1.7, 25% con BE y trailing
+68. Evitar primeras horas de sesión americana si hay volatilidad extrema por noticias
+
+## Bitcoin Intradía
+69. Analizar SIEMPRE top-down: diario → 4h → 1h → 15min → 5min
+70. Identificar fase Wyckoff activa antes de definir dirección intradía
+71. Precio sobre VWAP → solo largos; precio bajo VWAP → solo cortos
+72. Entrada solo con volumen creciente en vela de confirmación
+73. Lunes y viernes requieren precaución adicional — esperar consolidación
+
+## Psicotrading — Rentabilidad
+74. Tener plan escrito que defina EXACTAMENTE el setup válido — si no está, no se opera
+75. Arriesgar solo lo que permita dormir tranquilo — si hay ansiedad, tamaño excesivo
+76. Llevar diario de trading con emociones, pensamientos y lecciones
+77. Tras 2 pérdidas consecutivas: pausa obligatoria de 2h mínimo
+78. Antes de cada operación preguntar: \"¿qué evidencia tengo para NO entrar?\"
+79. Definir de antemano qué es un mal día y cerrar al alcanzarlo
+80. NUNCA aumentar tamaño para recuperar pérdidas
+
+## Bot TradingView + WunderTrading
+81. Solo automatizar estrategias que ya domines manualmente
+82. API keys SIN permiso de retiro — solo trading habilitado
+83. Apalancamiento ≤5x en bots automáticos
+84. SIEMPRE incluir stop loss en cada alerta configurada
+85. Probar en demo mínimo 2 semanas antes de fondos reales
+86. Limitar posiciones simultáneas a máximo 2-3
+87. Verificar sintaxis del mensaje de alerta — un typo = orden sin SL
+
+## Ondas de Elliott
+88. NUNCA usar Elliott como metodología única — requiere confirmación con Wyckoff/SMC/volumen
+89. Empezar conteo desde diario/semanal, nunca desde temporalidades bajas
+90. Si hay más de 2 conteos posibles → estructura no clara → NO operar
+91. Usar divergencias RSI como confirmación de agotamiento en onda 5
+92. Si el conteo necesita reajustes más de 2 veces, descartarlo
+93. Complementar con volumen: onda 3 = mayor volumen, onda 5 = divergencia bajista de volumen
