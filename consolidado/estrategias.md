@@ -1,6 +1,6 @@
 # Estrategias de Trading (Consolidado)
 
-> Documento generado el 2026-05-29 a partir de 14 archivos fuente de 4 streamers: ArgenTrader, ZCoinTV, ScottFDX y NovaScalper.
+> Documento generado el 2026-05-29 a partir de 12 archivos fuente de 3 streamers: ArgenTrader, ZCoinTV y ScottFDX.
 
 ---
 
@@ -338,45 +338,6 @@ Las estrategias abarcan múltiples mercados (índices, criptomonedas, oro, forex
 
 ---
 
-## NovaScalper
-
-### 1. Gold Liquidity Trap (Trampa de Liquidez en Oro)
-
-- **Mercado/Activo**: Oro (XAU/USD)
-- **Temporalidad**: No especificada
-- **Condiciones de Entrada**:
-  1. Esperar a que la caza de liquidez se produzca primero (no actuar impulsivamente al detectar patrón)
-  2. Identificar velas agresivas de mecha larga que atraviesan nivel clave y retroceden instantáneamente
-  3. **Entrada**: En la ruptura FALLIDA — el precio atraviesa el nivel clave, retrocede y cierra dentro del rango
-  4. NO operar en la ruptura; operar en la ruptura fallida
-- **Stop Loss**: No colocar stops donde lo hacen todos los demás (justo detrás del nivel obvio); esperar confirmación de trampa antes de entrar
-- **Take Profit**: No especificado
-- **Gestión**: Paciencia y disciplina sobre impulso; no entrar hasta confirmar trampa ejecutada
-- **Herramientas**: No especificadas (análisis de acción de precio, velas, niveles de soporte/resistencia)
-- **Notas**:
-  - El mercado busca liquidez, no hacerte rico — los grandes necesitan avalanchas de pedidos
-  - La liquidez se esconde detrás de niveles obvios de S/R donde los minoristas colocan stops
-  - "Deja de ser un aperitivo y empieza a mirar los gráficos con mirada de depredador"
-  - Concepto educativo sobre mentalidad y colocación de stops, más que estrategia mecánica
-
-### 2. Nova Magic Strategy
-
-- **Mercado/Activo**: No especificado (información no disponible en texto)
-- **Temporalidad**: No especificada (información no disponible en texto)
-- **Condiciones de Entrada**: No especificadas — el contenido de trading se transmite exclusivamente mediante anotaciones visuales en pantalla (charts); los videos (~2 min) tienen música de fondo sin narración educativa hablada
-- **Stop Loss**: No especificado
-- **Take Profit**: No especificado
-- **Gestión**: No especificada
-- **Herramientas**: No especificadas (visible solo en los gráficos mostrados en video)
-- **Notas**:
-  - Serie de videos cortos numerados secuencialmente (Part 50, 51, 52)
-  - Formato visual con música "Elite music", intro/outro hablado pero sin narración durante la demostración
-  - Existen dos versiones de "Part 51" (abril y mayo 2026) — posible iteración
-  - **Limitación**: las reglas operativas no son extraíbles de subtítulos/audio; se requiere OCR/visión computacional o revisión manual frame por frame
-  - Consumir la serie en orden secuencial para comprensión completa
-
----
-
 ## Tabla Comparativa
 
 | Streamer | Estrategia | Activo | Temporalidad | Tipo |
@@ -393,9 +354,7 @@ Las estrategias abarcan múltiples mercados (índices, criptomonedas, oro, forex
 | ZCoinTV | Wyckoff + Bots Grid | Criptomonedas | 4h/diario (análisis) + bot continuo | Swing / Automatizado |
 | ScottFDX | Bitget Grid Futuros | Cripto (BTC, ETH, SOL, DOGE, LTC, BCH, UNI) | Continuo (bot) | Automatizado |
 | ScottFDX | Trading Crypto Paso a Paso | Cripto, acciones, índices | No especificada | Educativo / Conceptos |
-| NovaScalper | Gold Liquidity Trap | XAU/USD | No especificada | Intradía / Conceptual |
-| NovaScalper | Nova Magic Strategy | No especificado | No especificada | No especificado (visual) |
 
 ---
 
-*Documento generado a partir de 14 archivos fuente. Todos los criterios provienen directamente de los archivos originales; los campos marcados como "No especificado" no estaban presentes en las fuentes.*
+*Documento generado a partir de 12 archivos fuente. Todos los criterios provienen directamente de los archivos originales; los campos marcados como "No especificado" no estaban presentes en las fuentes.*

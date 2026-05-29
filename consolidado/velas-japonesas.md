@@ -23,14 +23,6 @@ Las velas japonesas representan la acción del precio en un período de tiempo m
   - **Doji**: cuerpo mínimo + mechas largas en ambos lados = indecisión/compresión. En temporalidad alta puede ser una acumulación en temporalidad baja (integrar con Wyckoff).
 - **Reglas**: los patrones NUNCA se usan solos — necesitan confluencia. Son confirmaciones secundarias. Combinar con divergencias, Volume Profile (HVN/LVN), Wyckoff. Temporalidades altas (diario, semanal) son más fiables que bajas (1min, 5min). A menor temporalidad, más confluencias se necesitan.
 
-### NovaScalper
-- **Vela fuerte como señuelo**: el cierre de vela con cuerpo grande y sin vacilación parece confirmación perfecta, pero frecuentemente la siguiente vela va en dirección opuesta. Es una de las trampas más frustrantes en el trading de oro.
-- **El mercado conoce el comportamiento del trader**: todos están entrenados para comprar en cierre alcista sobre nivel y vender en cierre bajista bajo soporte. El mercado usa ese comportamiento colectivo como liquidez.
-- **Qué pasa "entre bastidores"**: la vela fuerte suele eliminar liquidez — rompe nivel, activa entradas de ruptura, obliga a cerrar posiciones contrarias. Una vez agotada esa liquidez, el mercado puede no tener motivo para continuar y el precio revierte.
-- **Regla fundamental**: la vela en sí NO es la señal. La reacción tras el cierre es. Los scalpers profesionales rara vez entran solo por el cierre fuerte — esperan a ver qué sucede con la siguiente vela.
-- **Checklist post-cierre fuerte (oro)**: ¿el precio se mantiene sobre/bajo el nivel roto? ¿Hace segunda prueba y rechaza? ¿O vuelve a caer instantáneamente? Esa reacción —no el cierre— es la que dice la verdad.
-- **Frase**: "El cierre de la vela llama la atención. La reacción revela la intención."
-
 ## Puntos de Acuerdo
 - Las velas reflejan la psicología del mercado y la batalla entre compradores y vendedores.
 - Las mechas largas indican rechazo o absorción de precio.
@@ -39,11 +31,11 @@ Las velas japonesas representan la acción del precio en un período de tiempo m
 - El contexto (tendencia, soporte/resistencia) es fundamental para interpretar cualquier vela o patrón.
 
 ## Puntos de Desacuerdo o Complementarios
-- **Enfoque**: ArgenTrader y ZCoinTV enseñan los fundamentos de lectura de velas y patrones. NovaScalper advierte sobre el peligro de confiar ciegamente en velas fuertes como señal de entrada.
-- **Patrones vs escepticismo**: ZCoinTV cataloga múltiples patrones (martillo, envolvente, estrella, soldados, etc.). NovaScalper complementa advirtiendo que justamente esos patrones "obvios" son usados por el mercado como trampas de liquidez.
-- **Nivel de detalle**: ZCoinTV es el más exhaustivo en patrones (10+ patrones con nombre y descripción). ArgenTrader se enfoca más en la lectura de una vela individual (absorción, marubozu). NovaScalper se enfoca en un solo concepto: la vela fuerte como señuelo.
-- **Integración sugerida**: ZCoinTV sugiere explícitamente integrar patrones de velas con Wyckoff y Volume Profile. ArgenTrader enfatiza el contexto de tendencia. NovaScalper integra implícitamente velas con liquidez.
-- **Activo específico**: NovaScalper habla específicamente de oro (donde las trampas de velas son especialmente frecuentes por su velocidad). ArgenTrader y ZCoinTV son genéricos.
+- **Enfoque**: ArgenTrader y ZCoinTV enseñan los fundamentos de lectura de velas y patrones. ArgenTrader se enfoca en la vela individual (absorción, marubozu); ZCoinTV cataloga múltiples patrones.
+- **Patrones**: ZCoinTV cataloga múltiples patrones (martillo, envolvente, estrella, soldados, etc.). ArgenTrader complementa con la lectura detallada de una vela individual.
+- **Nivel de detalle**: ZCoinTV es el más exhaustivo en patrones (10+ patrones con nombre y descripción). ArgenTrader se enfoca más en la lectura de una vela individual (absorción, marubozu).
+- **Integración sugerida**: ZCoinTV sugiere explícitamente integrar patrones de velas con Wyckoff y Volume Profile. ArgenTrader enfatiza el contexto de tendencia. Ambos enfoques son complementarios.
+- **Activo específico**: ArgenTrader y ZCoinTV son genéricos y aplicables a cualquier activo.
 
 ## Reglas Operativas Consolidadas
 1. **Leer la vela completa**: apertura, cierre, máximo, mínimo. El color indica quién dominó, las mechas indican rechazo o absorción.
@@ -52,11 +44,11 @@ Las velas japonesas representan la acción del precio en un período de tiempo m
 4. **Marubozu** (sin mechas) = fuerte convicción, sin rechazo.
 5. **Patrones como confirmación secundaria**: nunca entrar solo porque se formó un martillo, envolvente o estrella. Necesitan confluencia.
 6. **Temporalidades altas (diario, 4h) son más fiables** que bajas (5min, 1min) para patrones de velas.
-7. **Desconfiar de la vela fuerte aislada**: un cierre fuerte puede ser un señuelo para generar liquidez. Esperar la reacción de la(s) siguiente(s) vela(s) antes de entrar.
-8. **Checklist de confirmación post-vela fuerte**:
-   - ¿El precio se mantiene sobre/bajo el nivel?
-   - ¿Hace segunda prueba con rechazo?
-   - ¿O revierte instantáneamente?
+7. **Esperar confirmación post-patrón**: ningún patrón de velas es infalible. Esperar la reacción de la(s) siguiente(s) vela(s) antes de entrar.
+8. **Checklist de confirmación post-patrón**:
+   - ¿El precio se mantiene en la dirección del patrón?
+   - ¿Hay confluencia con otras herramientas (RSI, volumen, soporte/resistencia)?
+   - ¿El contexto de tendencia respalda el patrón?
 9. **Doji = indecisión**. En temporalidad alta puede indicar acumulación/distribución — integrar con Wyckoff.
 10. **Combinar velas con**: Volume Profile (HVN/LVN/POC), divergencias RSI, estructura de mercado (SMC/Wyckoff), análisis de liquidez.
 11. **Practicar lectura constante de gráficos**, no solo al tradear. Desarrollar el ojo para distinguir entre señal real y señuelo.
@@ -65,4 +57,3 @@ Las velas japonesas representan la acción del precio en un período de tiempo m
 - [ArgenTrader — Velas Japonesas](../streamers/argentrader/conceptos/velas-japonesas.md)
 - [ZCoinTV — Velas Japonesas (Estructura y Lectura)](../streamers/zcointv/conceptos/velas-japonesas.md)
 - [ZCoinTV — Patrones de Velas Japonesas](../streamers/zcointv/conceptos/patrones-velas-japonesas.md)
-- [NovaScalper — Vela Fuerte como Señuelo](../streamers/novascalper/conceptos/vela-fuerte-senuelo.md)

@@ -2,7 +2,7 @@
 
 ## Visión General
 
-El psicotrading es el factor diferencial entre traders rentables y no rentables. No se trata de talento innato ni de inteligencia superior, sino de **disciplina, control emocional y un proceso sistemático** que permita ejecutar un plan sin desviaciones. Los 3 streamers coinciden en que los errores psicológicos (FOMO, revenge trading, exceso de apalancamiento, operar sin plan) son la causa principal de las cuentas liquidadas, por encima de fallos técnicos. La rentabilidad sostenida proviene de la consistencia operativa y la capacidad de filtrar setups, no de trades aislados espectaculares.
+El psicotrading es el factor diferencial entre traders rentables y no rentables. No se trata de talento innato ni de inteligencia superior, sino de **disciplina, control emocional y un proceso sistemático** que permita ejecutar un plan sin desviaciones. Los 2 streamers coinciden en que los errores psicológicos (FOMO, revenge trading, exceso de apalancamiento, operar sin plan) son la causa principal de las cuentas liquidadas, por encima de fallos técnicos. La rentabilidad sostenida proviene de la consistencia operativa y la capacidad de filtrar setups, no de trades aislados espectaculares.
 
 ---
 
@@ -35,42 +35,18 @@ Amplía el espectro a 5 errores y añade la capa de psicotrading preventivo:
 - Desapego del resultado individual: enfocarse en la calidad del proceso, no en el PnL
 - Psicotrading **preventivo** (crear condiciones ANTES) vs **reactivo** (controlar DURANTE)
 
-### NovaScalper — Querer vs Necesitar + Trampas Psicológicas
-Aborda el psicotrading desde el micro-momento de la decisión:
-
-**Querer vs Necesitar**:
-- Querer = encontrar oportunidad limpia. Necesitar = urgencia emocional (recuperar, demostrar, alcanzar objetivo).
-- Cuando necesitas, dejas de interpretar el gráfico objetivamente. Cada vela parece confirmación.
-- El oro castiga especialmente al trader emocional por su velocidad.
-- **Auto-test**: antes de cada trade preguntarse ¿quiero esta configuración o necesito este trade?
-- Los profesionales reducen velocidad al sentir urgencia. La paciencia es la ventaja.
-
-**El Pullback que Parece Seguro es el Más Peligroso**:
-- Las entradas concurridas son donde el mercado busca liquidez.
-- Cuando "todos" ven el mismo retroceso limpio, el mercado barre stops antes de continuar.
-- Los profesionales esperan la falsa ruptura y la caza de stops antes de entrar.
-- Pregunta clave: ¿quién está quedando atrapado aquí?
-
-**El Consenso es Peligroso**:
-- Cuando todo el mundo está de acuerdo (redes sociales, grupos, noticias), el mercado se "ensucia".
-- Demasiada gente del mismo lado → liquidez acumulada en lugares previsibles → barridos.
-- El mercado reajusta su posicionamiento: castiga a los que entran tarde, elimina jugadores débiles.
-- El movimiento real comienza después del barrido.
-
----
-
 ## Puntos de Acuerdo
 
 1. **Stop Loss SIEMPRE**: todos coinciden en que es innegociable, colocado al entrar y sin mover en contra.
-2. **Apalancamiento bajo (≤5x)**: ScottFDX y ZCoinTV lo establecen explícitamente; NovaScalper es implícito en su enfoque conservador.
+2. **Apalancamiento bajo (≤5x)**: ScottFDX y ZCoinTV lo establecen explícitamente como regla fundamental.
 3. **Prohibido el revenge trading**: definido por ScottFDX, reforzado por ZCoinTV ("nunca aumentar tamaño para recuperar pérdidas").
 4. **Control emocional como factor crítico**: las emociones (rabia, ansiedad, euforia, FOMO) destruyen la objetividad.
-5. **La urgencia/necesidad emocional contamina el análisis**: concepto central de NovaScalper, alineado con el revenge trading de ScottFDX y el error #5 de ZCoinTV.
-6. **Tener un plan de trading escrito**: ZCoinTV lo exige explícitamente; ScottFDX y NovaScalper lo asumen como base.
-7. **Pausa obligatoria tras pérdidas**: ScottFDX (30 min), ZCoinTV (2h tras 2 pérdidas consecutivas), NovaScalper (reducir velocidad).
-8. **El mercado castiga el comportamiento emocional predecible**: NovaScalper lo articula como caza de liquidez; ScottFDX y ZCoinTV como liquidación por malas decisiones.
+5. **La urgencia/necesidad emocional contamina el análisis**: alineado con el revenge trading de ScottFDX y el error #5 de ZCoinTV.
+6. **Tener un plan de trading escrito**: ZCoinTV lo exige explícitamente; ScottFDX lo asume como base fundamental.
+7. **Pausa obligatoria tras pérdidas**: ScottFDX (30 min), ZCoinTV (2h tras 2 pérdidas consecutivas).
+8. **El mercado castiga el comportamiento emocional predecible**: ScottFDX y ZCoinTV lo articulan como liquidación por malas decisiones fruto de emociones descontroladas.
 9. **Paciencia como ventaja competitiva**: los 3 coinciden en que la paciencia para esperar el setup correcto diferencia al rentable del no rentable.
-10. **Auto-reflexión y aprendizaje de pérdidas**: diario de trading (ZCoinTV), análisis en frío post-pérdida (ScottFDX), auto-test emocional (NovaScalper).
+10. **Auto-reflexión y aprendizaje de pérdidas**: diario de trading (ZCoinTV), análisis en frío post-pérdida (ScottFDX).
 11. **Límite diario de pérdidas**: ScottFDX y ZCoinTV lo formalizan como regla operativa.
 
 ---
@@ -79,13 +55,13 @@ Aborda el psicotrading desde el micro-momento de la decisión:
 
 | Aspecto | Diferencias y complementos |
 |---------|---------------------------|
-| **Práctica demo previa** | ZCoinTV la exige (2-3 meses). ScottFDX y NovaScalper no la mencionan directamente. Es un complemento preventivo valioso. |
-| **Revenge trading** | ScottFDX lo considera el error más grave. ZCoinTV lo incluye como parte del error emocional (#5). NovaScalper lo trata como caso extremo de "necesitar" el trade. Visiones complementarias. |
-| **Enfoque del psicotrading** | ZCoinTV: marco preventivo (plan escrito, tamaño de posición, diario). NovaScalper: detección en el momento (test querer vs necesitar). ScottFDX: reglas operativas post-error. Se complementan en 3 fases: antes, durante y después del trade. |
-| **Dimensión de liquidez** | NovaScalper introduce el concepto de que el mercado castiga comportamientos predecibles cazando liquidez donde se acumulan stops. ZCoinTV habla de sesgo de confirmación (trampa interna). Son complementarios: uno mira al mercado, otro a la mente del trader. |
-| **El consenso como señal de peligro** | NovaScalper advierte contra operar cuando "todos están de acuerdo". ZCoinTV advierte contra el sesgo de confirmación (buscar solo info que confirme). Ambos apuntan a lo mismo desde ángulos distintos. |
-| **Diario de trading** | Exclusivo de ZCoinTV como herramienta estructurada de auto-mejora. Podría integrarse con el auto-test de NovaScalper. |
-| **Rachas ganadoras** | ZCoinTV es el único que advierte sobre la euforia post-ganancia grande (pausa de 30 min). Similar al concepto de NovaScalper de "reducir velocidad al sentir emoción", pero aplicado a ganancias, no solo a pérdidas. |
+| **Práctica demo previa** | ZCoinTV la exige (2-3 meses). ScottFDX no la menciona directamente. Es un complemento preventivo valioso. |
+| **Revenge trading** | ScottFDX lo considera el error más grave. ZCoinTV lo incluye como parte del error emocional (#5). Visiones complementarias. |
+| **Enfoque del psicotrading** | ZCoinTV: marco preventivo (plan escrito, tamaño de posición, diario). ScottFDX: reglas operativas post-error. Se complementan en 2 fases: antes y después del trade. |
+| **Dimensión de liquidez** | ZCoinTV habla de sesgo de confirmación (trampa interna de la mente del trader). Complementa el enfoque operativo de ScottFDX con una capa psicológica. |
+| **El consenso como señal de peligro** | ZCoinTV advierte contra el sesgo de confirmación (buscar solo info que confirme nuestras ideas preconcebidas). |
+| **Diario de trading** | Exclusivo de ZCoinTV como herramienta estructurada de auto-mejora. |
+| **Rachas ganadoras** | ZCoinTV advierte sobre la euforia post-ganancia grande (pausa de 30 min para no operar desde la emoción positiva). |
 
 ---
 
@@ -126,6 +102,3 @@ Aborda el psicotrading desde el micro-momento de la decisión:
 | ScottFDX | 3 errores que liquidan cuentas | `scottfdx/conceptos/3-errores-liquidar-cuenta-futuros.md` |
 | ZCoinTV | 5 errores comunes en trading | `zcointv/conceptos/errores-comunes-trading.md` |
 | ZCoinTV | Secretos de psicotrading rentable | `zcointv/conceptos/psicotrading-secretos-rentabilidad.md` |
-| NovaScalper | Querer vs Necesitar un trade | `novascalper/conceptos/querer-vs-necesitar-trade.md` |
-| NovaScalper | El pullback seguro es una trampa | `novascalper/conceptos/pullback-seguro-trampa.md` |
-| NovaScalper | El consenso peligroso en oro | `novascalper/conceptos/consenso-peligroso-oro.md` |

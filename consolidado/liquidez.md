@@ -15,15 +15,6 @@ La liquidez es el combustible del mercado: dinero disponible reflejado en órden
 - **Reglas clave**: NUNCA poner stop-loss justo en un pool de liquidez; filtrar 50x-100x para scalping; revisar mapa de liquidaciones ANTES de cada entrada; la liquidez es complemento, NO el corazón de la estrategia; si el precio ya barrió un pool, esperar al siguiente en dirección opuesta.
 - **Frase**: "El precio está constantemente en busca de liquidez, porque ahí es donde los grandes pueden posicionarse sin mover demasiado el mercado. Si no entendés dónde está la liquidez, tarde o temprano vas a SER la liquidez."
 
-### NovaScalper
-- **Gold Liquidity Trap**: el mercado del oro es especialmente conocido por cazar stops. Una vela monstruosa se dispara, toca tu stop loss por un milímetro, y luego se desploma justo donde habías previsto. No fue mala suerte: fuiste sacrificado como fuente de liquidez.
-- **Realidad del mercado**: los grandes bancos y fondos manejan volúmenes tan enormes que no pueden comprar o vender de forma repentina. Necesitan una avalancha de pedidos para cubrir sus puestos. El dinero se esconde detrás de niveles obvios de soporte y resistencia.
-- **Mecanismo de la trampa**: los especuladores empujan el precio justo por encima de máximos para activar stops de minoristas → genera presión de compra/venta → los inversores inteligentes absorben y dan vuelco al mercado en dirección opuesta.
-- **Regla fundamental**: No operar en la ruptura, operar en la ruptura fallida. El precio atraviesa el nivel clave → retrocede instantáneamente → cierra dentro del rango. Esa es la señal.
-- **Paciencia y disciplina**: no entrar impulsivamente al detectar un patrón. Esperar a que la caza se produzca primero. Buscar velas agresivas de mecha larga ("las villanas del gráfico").
-- **Colocación de stops**: no colocar stops donde lo hacen todos. Dejar que la finta confirme la trampa antes de entrar.
-- **Frase**: "Deja de ser un aperitivo y empieza a mirar los gráficos con la mirada de un depredador."
-
 ## Puntos de Acuerdo
 - El mercado busca liquidez, no hacerte rico. Los grandes necesitan liquidez del retail para posicionarse.
 - Los stops del trader minorista concentrados en niveles obvios son el objetivo de la caza de liquidez.
@@ -32,16 +23,16 @@ La liquidez es el combustible del mercado: dinero disponible reflejado en órden
 - La liquidez es una herramienta de confirmación, no la razón principal para entrar.
 
 ## Puntos de Desacuerdo o Complementarios
-- **Herramientas**: ArgenTrader menciona herramientas concretas (Coinglass, Trade Different, TensorChart, indicador Leviathan en TradingView). NovaScalper no menciona herramientas específicas, se enfoca en la lectura del price action (mechas largas, rupturas fallidas).
-- **Enfoque**: ArgenTrader tiene un enfoque más sistemático con setup definido (Liquidity Sweep: tendencia + barrido + engulfing). NovaScalper tiene un enfoque más narrativo/psicológico centrado en el oro y en la mentalidad del trader.
-- **Activo**: NovaScalper se enfoca exclusivamente en oro (XAU/USD). ArgenTrader habla de liquidez de forma general aplicable a cualquier activo.
-- **Entrada**: ArgenTrader entra tras barrido + vela envolvente. NovaScalper entra tras ruptura fallida con retorno al rango. Ambos esperan confirmación post-barrido, pero con distinto matiz: ArgenTrader busca engulfing, NovaScalper busca cierre dentro del rango.
+- **Herramientas**: ArgenTrader menciona herramientas concretas (Coinglass, Trade Different, TensorChart, indicador Leviathan en TradingView).
+- **Enfoque**: ArgenTrader tiene un enfoque sistemático con setup definido (Liquidity Sweep: tendencia + barrido + engulfing).
+- **Activo**: ArgenTrader habla de liquidez de forma general aplicable a cualquier activo.
+- **Entrada**: ArgenTrader entra tras barrido + vela envolvente. Confirmación post-barrido con engulfing.
 
 ## Reglas Operativas Consolidadas
 1. **Identificar pools de liquidez** ANTES de cada entrada usando heatmaps (Coinglass, Trade Different) y/o niveles obvios de soporte/resistencia.
 2. **NUNCA colocar el stop loss** justo en un pool de liquidez concentrada.
 3. **Esperar el barrido completo**: el precio debe barrer la zona de liquidez y dar señal de agotamiento/rechazo.
-4. **Confirmar antes de entrar**: vela envolvente (ArgenTrader) o cierre dentro del rango tras ruptura fallida (NovaScalper).
+4. **Confirmar antes de entrar**: vela envolvente (engulfing) tras el barrido completo.
 5. **Stop Loss** en zona SIN liquidez concentrada, por debajo del mínimo del barrido (largos) o encima del máximo (cortos).
 6. **Take Profit** en el pool de liquidez del lado opuesto.
 7. **No operar en la ruptura, operar en la ruptura fallida**: si el precio rompe y vuelve a cerrar dentro del rango, es la señal de que la cacería terminó.
@@ -53,4 +44,3 @@ La liquidez es el combustible del mercado: dinero disponible reflejado en órden
 ## Fuentes
 - [ArgenTrader — Conceptos: Liquidez](../streamers/argentrader/conceptos/liquidez.md)
 - [ArgenTrader — Setup: Liquidity Sweep](../streamers/argentrader/setups/liquidity-sweep.md)
-- [NovaScalper — The Gold Liquidity Trap](../streamers/novascalper/conceptos/gold-liquidity-trap.md)
