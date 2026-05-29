@@ -17,7 +17,7 @@ Convertir cientos de horas de contenido de trading en YouTube en una base de con
 | **ArgenTrader** | [@ArgenTraderr](https://www.youtube.com/@ArgenTraderr) | Español (argentino) | ICT/SMC, cripto, futuros, grid bots, liquidez | 2 AM UTC |
 | **ZCoinTV** | [@ZCoinTV](https://www.youtube.com/@ZCoinTV) | Español | Wyckoff, bots, order flow, velas, psicotrading, VWAP | 1 AM UTC |
 | **ScottFDX** | [@ScottFDX](https://www.youtube.com/@ScottFDX) | Español | Cripto, futuros, bots Bitget, TradingView, oro | 12 AM UTC |
-| **NovaScalper** | [NovaScalper](https://www.youtube.com/channel/UCUZAynJKzVIa-N8qy7x-eyw) | English | Oro, scalping, psicología, liquidity traps | 11 PM UTC |
+| **NovaTrader** | [@nova-trader](https://youtube.com/@nova-trader) | Español | Bitcoin, Wyckoff, Volume Profile, Fibonacci, RSI, streams diarios | 11 PM UTC |
 
 ## 🧠 Knowledge Consolidation
 
