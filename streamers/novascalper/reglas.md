@@ -28,6 +28,22 @@
 19. Acertar la dirección no es suficiente — importa timing, entrada y psicología
 20. Pregúntate siempre: ¿quién está quedando atrapado en este movimiento?
 
+## Spikes de Noticias
+23. No entres en spikes de noticias cuando "todo parece obvio" — es el peor momento de entrada
+24. El spike de noticias combina 3 fuerzas: algoritmos automáticos, liquidación de shorts, y traders de ruptura — caos saturado = setup de reversión
+25. Los compradores tardíos en spikes de noticias son la liquidez más fácil de encontrar para el mercado
+26. Después de la caza de stops post-spike, el movimiento real puede continuar — paciencia
+
+## Psicología del Éxito
+27. Después de una gran victoria, reduce tamaño — el exceso de confianza es el setup para la siguiente pérdida
+28. El mejor trade (entrada perfecta, ganancia fácil) suele predisponerte a la siguiente pérdida porque modifica tu psicología
+29. Tras un win fácil: baja el ritmo, recalibra, no persigas — los profesionales se vuelven más cautelosos, no menos
+
+## Análisis Macro
+30. Monitorea el DXY (índice del dólar) al operar oro: USD fuerte = oro débil (correlación inversa)
+31. Las tasas de interés al alza son bajistas para el oro — el oro no paga rendimientos
+32. Desconfía de narrativas "obvias" (guerra = oro) — cuando el posicionamiento es demasiado unilateral, el mercado revierte
+
 ## Sobre el Canal
-21. NovaScalper publica lecciones de ~2 min con formato visual — las anotaciones en pantalla son el contenido principal
-22. La serie "Nova magic trading strategy" (50+ partes) muestra setups concretos con entradas y salidas visuales
+33. NovaScalper publica lecciones de ~2 min con formato visual — las anotaciones en pantalla son el contenido principal
+34. La serie "Nova magic trading strategy" (50+ partes) muestra setups concretos con entradas y salidas visuales
