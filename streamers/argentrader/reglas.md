@@ -36,3 +36,12 @@
 23. Paciencia para esperar barridos completos
 24. Disciplina para no operar cuando no hay señales claras
 25. "El mercado no te persigue. Simplemente busca liquidez."
+
+## Mentalidad del Trader
+26. Las pérdidas son parte del juego — hasta el mejor trader del mundo pierde
+27. Lo importante es gestionar las pérdidas para tener más ganancias que pérdidas
+28. Mantener una mentalidad fría y objetiva en todo momento
+29. No dejarse llevar por las emociones al operar
+30. Ser disciplinado con la estrategia y respetarla al pie de la letra
+31. Desconfiar de "influencers" que prometen estrategias 100% rentables — no existen
+32. Abordar el trading desde una perspectiva realista, no desde la fantasía de solo ganancias
