@@ -71,7 +71,7 @@ trading-knowledge-base/
 
 ## 🤖 Pipeline Automatizado (Cron)
 
-El conocimiento se genera automáticamente mediante **Hermes Agent** corriendo en Windows:
+El conocimiento se genera automáticamente mediante **Hermes Agent** corriendo en Linux (Oracle Cloud ARM64):
 
 ```
         4 PM (-6)              8 PM (-6)                   9 PM (-6)
@@ -142,24 +142,34 @@ Registrar el canal en el skill `trading-streamer-intel`, crear cron job, y listo
 
 ---
 
-## 🔑 Configuración SSH
+## 🔑 Configuración del Pipeline
 
-El remote de Git usa SSH con la clave personal del usuario:
+### YouTube Cookies (obligatorio en VPS/Cloud)
+YouTube bloquea IPs de cloud providers (Oracle, AWS). Se requieren cookies de un navegador real:
+```bash
+# Guardar cookies exportadas en:
+~/proyects/trading/cookies/youtube.txt
 
+# Config de yt-dlp (~/.config/yt-dlp/config):
+--cookies ~/proyects/trading/cookies/youtube.txt
+--js-runtimes node
+--remote-components ejs:github
+```
+
+### Git Remote (SSH)
+El remote usa SSH con clave `~/.ssh/id_ed25519`:
 ```
 Remote:  git@github-personal:jsarmiento-dev/trading-knowledge-base.git
 Host:    github-personal → IdentityFile ~/.ssh/id_ed25519
 ```
 
-Para que el cron pueda hacer push automático, el agente SSH debe estar corriendo con la clave cargada.
-
 ---
 
 ## 📋 Skill de Hermes
 
-Este repositorio es mantenido por el skill **`trading-streamer-intel`** (v1.2.0):
+Este repositorio es mantenido por el skill **`trading-streamer-intel`** (v2.0.0):
 
-- **Ubicación**: `~/AppData/Local/hermes/skills/trading/trading-streamer-intel/SKILL.md`
+- **Ubicación**: `~/.hermes/skills/trading/trading-streamer-intel/SKILL.md`
 - **Requiere**: `youtube-content` skill, `yt-dlp`, `youtube-transcript-api`
 - **Script de transcripción**: `skills/media/youtube-content/scripts/fetch_transcript.py`
 
