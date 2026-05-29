@@ -7,7 +7,16 @@
 4. Integrar patrones de velas con metodología Wyckoff, volume profile y divergencias
 
 ## Gestión de Riesgo
-<!-- Reglas de gestión de riesgo -->
+37. Practicar SIEMPRE en demo antes de usar dinero real (mínimo 2-3 meses de consistencia positiva)
+38. NUNCA operar sin stop loss definido antes de entrar a la operación
+39. Tener un plan de trading escrito con criterios de entrada, salida y gestión documentados
+40. No superar 5x de apalancamiento en futuros
+41. Si las emociones dominan, cerrar todo y apagar la pantalla por ese día
+42. NUNCA usar break even de forma automática al abrir el trade
+43. Solo colocar break even cuando el regreso al entry indique inversión de probabilidades
+44. Calcular Risk Reward Ratio ANTES de entrar — si ratio <1.5 cuestionar la operativa
+45. Máximo 5% de riesgo por operación
+46. Rentabilidad proviene de trades buenos tomados Y trades malos evitados
 
 ## Análisis Técnico
 5. Temporalidades altas (diario, semanal, mensual) = patrones más fiables
@@ -16,32 +25,52 @@
 8. Entre más envolvente la vela, más fuerte es la señal de reversión
 
 ## Ejecución
-9. El martillo/estrella fugaz con mecha en la dirección correcta es más confiable que el invertido
-10. Buscar la vela Doji como señal de indecisión tras movimientos fuertes
-11. Siempre usar multi-timeframe: dirección en temporalidad mayor, entrada en menor
+47. El martillo/estrella fugaz con mecha en la dirección correcta es más confiable que el invertido
+48. Buscar la vela Doji como señal de indecisión tras movimientos fuertes
+49. Siempre usar multi-timeframe: dirección en temporalidad mayor, entrada en menor
 
 ## Herramientas y Bots
-<!-- Reglas sobre herramientas y bots -->
+50. El bot maneja la mecánica, el trader define el criterio y gestión de riesgo
+51. Preferir activos de baja volatilidad (BTC) al empezar con bots
+52. Nunca activar bot sin stop loss definido
+53. Apalancamiento bajo (≤5x) en bots de futuros
+54. Practicar primero en cuentas demo antes de bots con dinero real
 
 ## Psicología
-12. No buscar patrones donde no los hay — forzar lecturas lleva a pérdidas
-13. La práctica leyendo gráficos es un hábito diario, no un evento puntual
+55. No buscar patrones donde no los hay — forzar lecturas lleva a pérdidas
+56. La práctica leyendo gráficos es un hábito diario, no un evento puntual
 
-## Gestión de Riesgo
-14. Calcular Risk Reward Ratio ANTES de entrar — si ratio <1.5 cuestionar la operativa
-15. Rentabilidad proviene de trades buenos tomados Y trades malos evitados
-16. Máximo 5% de riesgo por operación
-17. Siempre usar stop loss
-18. NUNCA usar break even de forma automática al abrir el trade
-19. Solo colocar break even cuando el regreso al entry indique inversión de probabilidades
-20. Usar HVN, LVN y POC como niveles para colocar BE y stop profit
+## Noticias y Análisis Fundamental
+57. Revisar el calendario económico ANTES de cada sesión de trading
+58. Si hay noticia de alto impacto (3 estrellas) en los próximos 30-60 min → NO abrir nuevas posiciones y ajustar/cerrar abiertas
+59. Después de la noticia, esperar 15-30 min mínimo a que el mercado digiera antes de operar
+60. NUNCA intentar anticipar la dirección de la noticia ni operar "el rumor"
+61. Las noticias de USD (CPI, FOMC, NFP) afectan a crypto, oro, índices y forex por igual
+62. Análisis técnico y fundamental son complementarios — no rivales
 
-## Bots de Trading
-21. El bot maneja la mecánica, el trader define el criterio y gestión de riesgo
-22. Preferir activos de baja volatilidad (BTC) al empezar con bots
-23. Nunca activar bot sin stop loss definido
-24. Apalancamiento bajo (≤5x) en bots de futuros
-25. Practicar primero en cuentas demo antes de bots con dinero real
+## Volume Profile
+63. Usar HVN, LVN y POC como niveles para colocar BE, stop loss y take profit
+64. Los LVN (Low Volume Nodes) son zonas de tránsito rápido — ideales para colocar stops
+65. Los HVN (High Volume Nodes) son zonas de estacionamiento — actúan como S/R fuertes
+66. El POC actúa como imán — el precio tiende a volver a él
+67. La estrategia de Volume Profile es probabilística — si el precio rompe con fuerza, no perseguir
+68. Usar Volume Profile de 1h/4h como contexto, 5min/15min como entrada
+
+## Impuestos y Residencia Fiscal
+69. NUNCA improvisar un cambio de residencia fiscal — consultar con asesor fiscal especializado
+70. Documentar TODO: contratos de alquiler, facturas, billetes, extractos bancarios del nuevo país
+71. Cortar vínculos reales con el país de origen — no solo en papel
+72. Mantener registro de días de presencia física en cada país
+73. Declarar correctamente en el nuevo país de residencia
+
+## Bullrun y Gestión de Inversión
+74. NUNCA comprar en ATH con FOMO — esperar retrocesos a niveles técnicos (Fibonacci, soportes, EMA)
+75. Planificar las ventas en tramos (25-25-50%) con targets definidos por adelantado
+76. Usar el Fear & Greed Index: ≥90 → zona de venta, ≤20 → zona de compra
+77. Mantener siempre liquidez para aprovechar correcciones durante el bullrun
+78. No apalancarse en posiciones de inversión a largo plazo
+79. Si todo el mundo a tu alrededor está eufórico, es hora de vender, no de comprar
+80. "Nadie se arruina tomando ganancias" — tomar ganancias parciales, no esperar al top absoluto
 
 ## Wyckoff
 26. Fase A es el momento donde la tendencia previa desacelera — no tradear aún
@@ -97,3 +126,40 @@
 66. En cripto (interés homogéneo): esperar modelos con Spring/UTAD — más operables
 67. En forex (interés heterogéneo): esperar más pautas planas — más difíciles, entradas más tardías
 68. No buscar estructuras Wyckoff completas por debajo de 5 minutos — la acción institucional requiere tiempo
+
+## Bots de Trading (Ampliación)
+37. Solo usar bots si se tiene experiencia previa en trading — no son para principiantes
+38. El bot DEBE estar bien configurado con parámetros correctos para el activo específico
+39. No usar bots como solución "clic y olvidar" para hacerse rico
+40. Combinar bots con metodología Wyckoff para identificar acumulación/distribución
+41. Tener criterio para encender/apagar el bot según condiciones de mercado
+
+## Scalping en Bitget
+42. Siempre verificar modo AISLADO al cambiar de altcoin — NUNCA operar en cruzado
+43. Configurar apalancamiento razonable (≤50x) ANTES de entrar en altcoins
+44. Trasladar operativas por vela (timestamp), NO por precio exacto
+45. Configurar EMA 12 y RSI en la interfaz de Bitget para scalping
+46. Preferir USDT perpetual para mayor variedad de altcoins con liquidez
+
+## Estrategia de Venta en Bullrun
+47. No comprar altcoins en pleno impulso alcista — esperar pullbacks a nodos anteriores
+48. Vender en parciales progresivos, no esperar un precio objetivo único
+49. Identificar puntos de venta con divergencias bajistas RSI en diario + lateralización en 4H
+50. Complementar con distribuciones Wyckoff (UTAD + LPSY) en 4H/1H
+51. Nadie se arruinó tomando ganancias; muchos sí por no tomarlas
+
+## Psicotrading
+52. Desarrollar paciencia: esperar a que se cumplan todos los parámetros antes de entrar
+53. No tomar decisiones emocionales por movimientos rápidos del mercado
+54. No comprar en FOMO ni vender en pánico; ser contrapartida del sentimiento masivo
+55. Tener una estrategia testeada con win rate conocido para operar con confianza
+56. Reconocer los propios sesgos de personalidad y mitigarlos activamente
+57. Aceptar que se van a cometer errores — la humildad acelera el aprendizaje
+
+## Medias Móviles
+58. En temporalidades bajas: usar EMA o VWAP (más reactivas)
+59. En temporalidades altas (swing/spot): preferir SMA (filtra mejor el ruido)
+60. Anclar la media móvil a una temporalidad superior a la que se está tradeando
+61. Nunca usar medias móviles como señal única — requieren confluencia
+62. Los cruces de medias (50/100/200) en diario/semanal detectan cambios de tendencia macro
+63. Hacer backtesting antes de adoptar cualquier configuración de medias móviles
