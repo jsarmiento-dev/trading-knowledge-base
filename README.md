@@ -10,11 +10,30 @@ Convertir cientos de horas de contenido de trading en YouTube en una base de con
 
 ---
 
-## 📡 Streamer Monitoreado
+## 📡 Streamers Monitoreados
 
-| Streamer | Canal | Idioma | Enfoque | Horario de stream |
-|----------|-------|--------|---------|-------------------|
-| **ArgenTrader** | [@ArgenTraderr](https://www.youtube.com/@ArgenTraderr) | Español (argentino) | ICT/SMC, cripto, futuros, grid bots, liquidez, análisis técnico | ~4:00 PM UTC-6 |
+| Streamer | Canal | Idioma | Enfoque | Cron |
+|----------|-------|--------|---------|------|
+| **ArgenTrader** | [@ArgenTraderr](https://www.youtube.com/@ArgenTraderr) | Español (argentino) | ICT/SMC, cripto, futuros, grid bots, liquidez | 2 AM UTC |
+| **ZCoinTV** | [@ZCoinTV](https://www.youtube.com/@ZCoinTV) | Español | Wyckoff, bots, order flow, velas, psicotrading, VWAP | 1 AM UTC |
+| **ScottFDX** | [@ScottFDX](https://www.youtube.com/@ScottFDX) | Español | Cripto, futuros, bots Bitget, TradingView, oro | 12 AM UTC |
+| **NovaScalper** | [NovaScalper](https://www.youtube.com/channel/UCUZAynJKzVIa-N8qy7x-eyw) | English | Oro, scalping, psicología, liquidity traps | 11 PM UTC |
+
+## 🧠 Knowledge Consolidation
+
+Cada **sábado** se ejecuta el **Weekly Consolidator** que fusiona el nuevo conocimiento de todos los streamers en archivos maestros por tema en `consolidado/`:
+
+| Tema Consolidado | Streamers que Aportan |
+|-----------------|----------------------|
+| `liquidez.md` | ArgenTrader, NovaScalper |
+| `velas-japonesas.md` | ArgenTrader, ZCoinTV, NovaScalper |
+| `wyckoff-smc.md` | ArgenTrader, ZCoinTV |
+| `analisis-tecnico.md` | ArgenTrader, ZCoinTV |
+| `volumen.md` | ArgenTrader, ZCoinTV |
+| `psicotrading.md` | ScottFDX, ZCoinTV, NovaScalper |
+| `oro.md` | NovaScalper, ScottFDX |
+| `criptomonedas.md` | ScottFDX, ZCoinTV |
+| `bots-trading.md` | ArgenTrader, ZCoinTV, ScottFDX |
 
 ---
 
@@ -196,4 +215,4 @@ Este repositorio es mantenido por el skill **`trading-streamer-intel`** (v2.0.0)
 ---
 
 *Última actualización: 2026-05-29*
-*Repositorio mantenido por Hermes Agent (usuario: Jesús Sarmiento)*
+*Repositorio mantenido por Hermes Agent en Linux (Oracle Cloud ARM64)*
