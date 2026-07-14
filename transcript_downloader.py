@@ -77,7 +77,9 @@ def main():
 
         cmd = [
             YT_DLP, "--write-auto-subs",
-            "--sub-lang", "es,en",
+            "--sub-lang", "en.*,es.*",
+            "--sub-format", "vtt",
+            "--js-runtimes", "node",
             "--skip-download",
             "--output", output,
             "--quiet",
