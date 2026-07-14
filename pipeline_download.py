@@ -22,6 +22,8 @@ STREAMERS = [
     {'name': 'ScottFDX',    'channel': 'https://www.youtube.com/@ScottFDX',     'dir': 'ScottFDX',    'extra': []},
     {'name': 'NovaTrader',  'channel': 'https://www.youtube.com/@nova-trader',  'dir': 'NovaTrader',
      'extra': ['https://www.youtube.com/@nova-trader/streams', 'https://www.youtube.com/@nova-trader/shorts']},
+    {'name': 'MambaFx',     'channel': 'https://www.youtube.com/@mambafx',     'dir': 'MambaFx',
+     'extra': ['https://www.youtube.com/@mambafx/streams']},
 ]
 
 def log(msg):
