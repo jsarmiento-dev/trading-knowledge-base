@@ -64,12 +64,14 @@ def list_channel(url):
                        '-H', f'User-Agent: {CURL_UA}', url]
             cr = subprocess.run(curl_cmd, capture_output=True, text=True, timeout=15)
             ids = re.findall(r'"videoId":"([^"]+)"', cr.stdout)
-            return [{'id': vid, 'title': vid} for vid in dict.fromkeys(ids)]
+            return [{'id': vid, 'title': vid, 'url': f'https://www.youtube.com/watch?v={vid}'} for vid in dict.fromkeys(ids)]
         videos = []
         for line in r.stdout.strip().split('\n'):
             if '|' in line:
                 parts = line.split('|', 1)
-                videos.append({'id': parts[0].strip(), 'title': parts[1].strip() if len(parts) > 1 else parts[0]})
+                vid = parts[0].strip()
+                title = parts[1].strip() if len(parts) > 1 else vid
+                videos.append({'id': vid, 'title': title, 'url': f'https://www.youtube.com/watch?v={vid}'})
         return videos
     except Exception as e:
         log(f"  ✗ Error {url}: {e}")
