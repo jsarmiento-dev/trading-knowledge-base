@@ -9,6 +9,7 @@ import subprocess, time
 from datetime import datetime
 from pathlib import Path
 
+YT_DLP = r"C:\Users\USER\AppData\Local\Programs\Python\Python313\Scripts\yt-dlp.exe"
 BASE = Path("C:/trading-knowledge-base")
 COOKIES = BASE / "cookies/youtube.txt"
 PROCESSED = BASE / "processed_videos.txt"
@@ -75,7 +76,7 @@ def main():
         log(f"   [{i}/{len(pendientes)}] {p['streamer']}: {p['titulo'][:40]}...")
 
         cmd = [
-            "yt-dlp", "--write-auto-subs",
+            YT_DLP, "--write-auto-subs",
             "--sub-lang", "es,en",
             "--skip-download",
             "--output", output,
@@ -83,7 +84,7 @@ def main():
             url
         ]
         if COOKIES.exists():
-            cmd = ["yt-dlp", "--cookies", str(COOKIES)] + cmd[1:]
+            cmd = [YT_DLP, "--cookies", str(COOKIES)] + cmd[1:]
 
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
 
