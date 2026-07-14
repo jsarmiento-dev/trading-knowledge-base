@@ -46,9 +46,9 @@ def load_processed():
                 s.add(line.split('|')[0].strip())
     return s
 
-def save_processed(vid, title):
+def save_processed(vid, title, streamer_name=""):
     with open(PROCESSED_FILE, 'a') as f:
-        f.write(f"{vid}|{datetime.now().strftime('%Y-%m-%d')}|{title}\n")
+        f.write(f"{vid}|{datetime.now().strftime('%Y-%m-%d')}|{title}|{streamer_name}\n")
 
 # ─── Listado de canales ─────────────────────────────────────────
 
@@ -176,7 +176,7 @@ def process_streamer(streamer):
             'url': video['url'],
             'transcript_length': transcript_len
         })
-        save_processed(video['id'], video['title'])
+        save_processed(video['id'], video['title'], streamer['name'])
         time.sleep(3)
 
     return {'streamer': streamer['name'], 'new_videos': len(processed), 'processed': processed, 'error': None}
