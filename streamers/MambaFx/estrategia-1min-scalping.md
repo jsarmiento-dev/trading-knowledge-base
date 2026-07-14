@@ -114,42 +114,63 @@ Ejemplo con 30% WR y RR 1:4: `(0.30 × 4) - 0.70 = +0.50R` por operación.
 
 ---
 
-## 📊 Backtesting
+---
 
-**Backtest automatizado (GC=F - XAU/USD Gold Futures)**
+## 📊 Backtest US30 — NY Session Open
 
-| Parámetro | Valor |
-|---|---|
-| Período | 12-13 Jul 2026 |
-| Velas 1-min analizadas | 1,720 |
-| Trades generados por algoritmo | 0 |
+**Símbolo:** US30 (Dow Jones)
+**Período:** 2026-07-07 → 2026-07-13
+**Sesión:** New York (9:30 AM - 4:00 PM ET)
+**Velas 1-min analizadas:** 1949
+**Trades generados:** 0
 
-### ⚠ Por qué 0 trades en el backtest automatizado
+### Sin trades generados
 
-Esta estrategia es **visual y subjetiva**. El algoritmo no puede replicar:
-- La identificación de "4 toques" en un nivel (requiere contexto visual)
-- La evaluación de "agotamiento" de precio
-- La lectura de estructura de mercado con criterio humano
-- La confirmación interpretando el comportamiento de velas
+En 1949 velas de NY session no se encontraron setups que cumplieran:
+- Estructura de mercado clara (HH/HL o LL/LH)
+- Breakout con confirmación de vela
+- Ventana de entrada dentro de la sesión NY
 
-**La estrategia es altamente selectiva** — busca condiciones muy específicas que no ocurren todos los días. Esto es normal en scalping de calidad.
+Esto es consistente con una estrategia **selectiva** — no opera todos los días.
 
-### 📈 Ejemplos de trades SEGÚN LA ESTRATEGIA (manuales)
+### Notas del backtest
 
-| # | Dirección | Entry | SL | TP | RR | Setup |
-|---|---|---|---|---|---|---|
-| 1 | LONG | $2,350.0 | $2,348.9 | $2,354.2 | 1:4 | Breakout de resistencia con estructura HH/HL en 5-min |
-| 2 | SHORT | $2,345.0 | $2,346.1 | $2,341.1 | 1:4 | Breakdown de soporte con estructura LL/LH |
-| 3 | LONG | $2,360.0 | $2,358.9 | $2,363.8 | 1:3.8 | Breakout + confirmación de vela en 1-min |
-
-### Recomendaciones para validación real
-
-1. **Backtesting manual** en TradingView con +100 operaciones
-2. **Forward testing** en cuenta demo por 1 mes
-3. **Llevar estadísticas**: win rate, RR promedio, drawdown, profit factor
-4. **Comparar** con la ejecución del algoritmo aquí presente
+- El backtest es una **aproximación algorítmica** de una estrategia visual/subjetiva
+- La identificación de soportes con "4 toques" requiere criterio humano
+- La confirmación de breakout se basa en interpretación de velas
+- Para validación real: backtesting manual en TradingView + forward testing
 
 ---
 
-*Documentado por Hermes Agent con transcripciones de MambaFx*
-*Video original: h-Z7CEqBO3s — "The Only 1-Minute Scalping Strategy You Will Ever Need"*
+## 📊 Backtest US30 — NY Session Open
+
+**Símbolo:** YM=F (US30 Dow Jones Futures)
+**Sesión:** New York (9:30 AM - 4:00 PM ET)
+**Período:** 2026-07-07 → 2026-07-13
+**Velas 1-min analizadas:** 1949
+**Trades generados:** 0
+
+### Análisis
+
+El backtest automatizado **no generó trades** en este período. Esto se debe a:
+
+1. **La estrategia es visual/subjetiva** — identificar "4 toques en un soporte"
+   requiere criterio humano que un algoritmo no puede replicar exactamente
+2. **Swing points encontrados:** 22 máximos y 19 mínimos en 390 velas 5-min
+3. **Estructura de mercado detectada:** sí, hubo períodos con HH/HL y LL/LH
+4. **Breakout + confirmación:** el algoritmo exige que el precio cruce el nivel
+   Y cierre del lado correcto, lo que reduce falsos pero también oportunidades
+
+### Conclusión
+
+Para una validación real de la estrategia:
+- **Backtesting manual** en TradingView con +50 operaciones
+- **Forward testing** en cuenta demo por 1 mes
+- **Llevar estadísticas**: win rate, RR, drawdown, profit factor
+
+La estructura de la estrategia (filtro 5-min → breakout 1-min con confirmación
+→ SL tight → RR 1:4+) es sólida en teoría. La ejecución depende del criterio
+del trader para identificar niveles y esperar confirmación.
+
+---
+*Backtest automatizado con Yahoo Finance (YM=F) — Hermes Agent*
