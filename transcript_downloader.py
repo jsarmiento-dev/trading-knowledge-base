@@ -47,7 +47,8 @@ def main():
             if len(parts) < 4:
                 continue
             vid = parts[0].strip()
-            titulo = parts[1].strip()
+            fecha = parts[1].strip()
+            titulo = parts[2].strip()
             streamer = parts[3].strip()
 
             if streamer not in STREAMERS:
@@ -57,7 +58,7 @@ def main():
             tiene = bool(list(carpeta.glob(f"{vid}_transcript.txt")))
 
             if not tiene:
-                pendientes.append({"vid": vid, "titulo": titulo, "streamer": streamer})
+                pendientes.append({"vid": vid, "titulo": titulo, "fecha": fecha, "streamer": streamer})
 
     log(f"   → {len(pendientes)} video(s) pendiente(s)")
     if not pendientes:
@@ -112,7 +113,8 @@ def main():
 
                     texto = " ".join(clean)
                     txt_file = destino / f"{p['vid']}_transcript.txt"
-                    txt_file.write_text(texto, encoding="utf-8")
+                    header = f"# {p['fecha']} | {p['titulo']} | {p['streamer']}\n"
+                    txt_file.write_text(header + texto, encoding="utf-8")
                     sub_file.unlink(missing_ok=True)
                     log(f"   ✅ {len(texto)} chars")
                     descargados += 1
