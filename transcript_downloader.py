@@ -55,7 +55,7 @@ def main():
                 continue
 
             carpeta = BASE / "streamers" / streamer / "transcripciones"
-            tiene = bool(list(carpeta.glob(f"{vid}_transcript.txt")))
+            tiene = bool(list(carpeta.glob(f"{vid}_transcript.md")))
 
             if not tiene:
                 pendientes.append({"vid": vid, "titulo": titulo, "fecha": fecha, "streamer": streamer})
@@ -112,7 +112,7 @@ def main():
                             clean.append(l)
 
                     texto = " ".join(clean)
-                    txt_file = destino / f"{p['vid']}_transcript.txt"
+                    txt_file = destino / f"{p['vid']}_transcript.md"
                     header = f"# {p['fecha']} | {p['titulo']} | {p['streamer']}\n"
                     txt_file.write_text(header + texto, encoding="utf-8")
                     sub_file.unlink(missing_ok=True)
