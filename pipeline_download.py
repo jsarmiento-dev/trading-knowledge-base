@@ -29,6 +29,8 @@ STREAMERS = [
      'extra': ['https://www.youtube.com/@nova-trader/streams', 'https://www.youtube.com/@nova-trader/shorts']},
     {'name': 'MambaFx',     'channel': 'https://www.youtube.com/@mambafx',      'dir': 'MambaFx',
      'extra': ['https://www.youtube.com/@mambafx/streams']},
+    # ⭐ FAVORITO: Nuevo canal de trading — pendiente de su crecimiento
+    {'name': 'PuntoDeEntrada', 'channel': 'https://www.youtube.com/@PuntoDeEntradaYT', 'dir': 'PuntoDeEntrada', 'extra': []},
 ]
 
 # ─── Logging ────────────────────────────────────────────────────

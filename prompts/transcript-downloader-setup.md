@@ -60,7 +60,7 @@ from pathlib import Path
 BASE = Path("C:/trading-knowledge-base")
 COOKIES = BASE / "cookies/youtube.txt"
 PROCESSED = BASE / "processed_videos.txt"
-STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx"]
+STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx", "PuntoDeEntrada"]
 
 
 def log(msg):
@@ -229,6 +229,7 @@ streamers/ZCoinTV/transcripciones/VIDEOID_transcript.txt
 streamers/ScottFDX/transcripciones/VIDEOID_transcript.txt
 streamers/NovaTrader/transcripciones/VIDEOID_transcript.txt
 streamers/MambaFx/transcripciones/VIDEOID_transcript.txt
+streamers/PuntoDeEntrada/transcripciones/VIDEOID_transcript.txt
 ```
 
 ---
