@@ -128,7 +128,7 @@ def main():
             else:
                 log(f"   ⚠ Sin archivo de subtítulos")
         else:
-            log(f"   ❌ Error: {result.stderr[:80].strip()}")
+            log(f"   ❌ Error: {result.stderr[:120].strip()}")
 
         time.sleep(random.uniform(10, 18))
 
