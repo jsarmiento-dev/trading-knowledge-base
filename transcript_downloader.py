@@ -5,7 +5,7 @@ SOLO descarga transcripciones de videos nuevos.
 Usa processed_videos.txt (formato: id|fecha|titulo|streamer)
 Ejecutar via Windows Task Scheduler diariamente.
 """
-import subprocess, time
+import random, subprocess, time
 from datetime import datetime
 from pathlib import Path
 
@@ -92,6 +92,11 @@ def main():
 
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
 
+        if "HTTP Error 429" in result.stderr:
+            log(f"   ⚠ Rate limited (429), esperando 30s antes de reintentar...")
+            time.sleep(30)
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+
         if result.returncode == 0:
             for ext in [".vtt", ".srt", ".json"]:
                 files = list(destino.glob(f"{p['vid']}*{ext}"))
@@ -125,7 +130,7 @@ def main():
         else:
             log(f"   ❌ Error: {result.stderr[:80].strip()}")
 
-        time.sleep(3)
+        time.sleep(random.uniform(10, 18))
 
     if descargados == 0:
         log("\n⚠ No se descargó nada nuevo")
