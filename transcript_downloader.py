@@ -81,6 +81,7 @@ def main():
             "--sub-lang", "en.*,es.*",
             "--sub-format", "vtt",
             "--js-runtimes", "node",
+            "--impersonate", "chrome",
             "--skip-download",
             "--output", output,
             "--quiet",
