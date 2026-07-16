@@ -13,7 +13,8 @@ YT_DLP = r"C:\Users\USER\AppData\Local\Programs\Python\Python313\Scripts\yt-dlp.
 BASE = Path("C:/trading-knowledge-base")
 COOKIES = BASE / "cookies/youtube.txt"
 PROCESSED = BASE / "processed_videos.txt"
-STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx"]
+STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx", "PuntoDeEntrada"]
+AUDIOS_DIR = BASE / "audios_pendientes"
 
 def log(msg):
     print(f"[{datetime.now():%H:%M:%S}] {msg}")
@@ -24,6 +25,54 @@ def git(*args):
     if r.returncode != 0:
         log(f"⚠ git {' '.join(args)}: {r.stderr[:100].strip()}")
     return r
+
+def _download_audio(video_id, streamer, titulo=""):
+    """Descarga el audio de un video que no tiene subtítulos."""
+    AUDIOS_DIR.mkdir(parents=True, exist_ok=True)
+    output_template = str(AUDIOS_DIR / f"{video_id}.%(ext)s")
+
+    cmd = [
+        YT_DLP,
+        "-f", "bestaudio[ext=m4a]/bestaudio",
+        "--output", output_template,
+        "--quiet",
+        "--no-embed-thumbnail",
+        "--no-playlist",
+        "--js-runtimes", "node",
+        "--impersonate", "chrome",
+        f"https://www.youtube.com/watch?v={video_id}"
+    ]
+    if COOKIES.exists():
+        cmd = [YT_DLP, "--cookies", str(COOKIES)] + cmd[1:]
+
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        if r.returncode == 0:
+            for f in AUDIOS_DIR.glob(f"{video_id}.*"):
+                if f.suffix in [".m4a", ".webm", ".opus", ".mp3"]:
+                    log(f"   ✅ Audio descargado: {f.name}")
+                    meta_file = AUDIOS_DIR / f"{video_id}.meta"
+                    meta_file.write_text(f"{streamer}|{titulo}", encoding="utf-8")
+                    return
+            log(f"   ⚠ Audio descargado pero no se encontró el archivo")
+        elif "HTTP Error 429" in r.stderr:
+            log(f"   ⚠ Rate limited (429) en audio, esperando 30s...")
+            time.sleep(30)
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+            if r.returncode == 0:
+                for f in AUDIOS_DIR.glob(f"{video_id}.*"):
+                    if f.suffix in [".m4a", ".webm", ".opus", ".mp3"]:
+                        log(f"   ✅ Audio descargado: {f.name}")
+                        meta_file = AUDIOS_DIR / f"{video_id}.meta"
+                        meta_file.write_text(f"{streamer}|{titulo}", encoding="utf-8")
+                        return
+            log(f"   ❌ Error audio (reintento): {r.stderr[:80].strip()}")
+        else:
+            log(f"   ❌ Error descargando audio: {r.stderr[:80].strip()}")
+    except subprocess.TimeoutExpired:
+        log(f"   ❌ Timeout descargando audio ({video_id})")
+    except Exception as e:
+        log(f"   ❌ Excepción audio: {e}")
 
 def main():
     log("=" * 45)
@@ -98,6 +147,7 @@ def main():
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
 
         if result.returncode == 0:
+            encontrado = False
             for ext in [".vtt", ".srt", ".json"]:
                 files = list(destino.glob(f"{p['vid']}*{ext}"))
                 if files:
@@ -124,27 +174,39 @@ def main():
                     sub_file.unlink(missing_ok=True)
                     log(f"   ✅ {len(texto)} chars")
                     descargados += 1
+                    encontrado = True
                     break
-            else:
-                log(f"   ⚠ Sin archivo de subtítulos")
+            if not encontrado:
+                log(f"   ⚠ Sin subtítulos — descargando audio para Whisper...")
+                _download_audio(p['vid'], p['streamer'], p['titulo'])
         else:
-            log(f"   ❌ Error: {result.stderr[:120].strip()}")
+            log(f"   ⚠ yt-dlp falló ({result.stderr[:60].strip()}) — descargando audio para Whisper...")
+            _download_audio(p['vid'], p['streamer'], p['titulo'])
 
         time.sleep(random.uniform(10, 18))
 
-    if descargados == 0:
+    # Check if there are audios to commit even if no transcripts downloaded
+    nuevos_audios = len(list(AUDIOS_DIR.glob("*.m4a"))) + len(list(AUDIOS_DIR.glob("*.webm"))) + len(list(AUDIOS_DIR.glob("*.opus")))
+
+    if descargados == 0 and nuevos_audios == 0:
         log("\n⚠ No se descargó nada nuevo")
         return
 
     # 4. Commit y push
-    log(f"\n[4/4] Subiendo {descargados} transcripción(es)...")
+    if nuevos_audios:
+        log(f"\n[4/4] Subiendo {descargados} transcripción(es) y {nuevos_audios} audio(s)...")
+    else:
+        log(f"\n[4/4] Subiendo {descargados} transcripción(es)...")
     git("add", "-A")
     r = git("diff", "--cached", "--quiet")
     if r.returncode != 0:
         fecha = datetime.now().strftime("%Y-%m-%d")
-        git("commit", "-m", f"[transcripciones] {fecha} - {descargados} videos")
+        msg = f"[transcripciones] {fecha} - {descargados} transcripciones"
+        if nuevos_audios:
+            msg += f", {nuevos_audios} audios p/Whisper"
+        git("commit", "-m", msg)
         git("push")
-        log(f"✅ Push exitoso — {descargados} transcripciones nuevas")
+        log(f"✅ Push exitoso — {descargados} transcripciones, {nuevos_audios} audios")
     else:
         log("📭 Sin cambios para commit")
 
