@@ -31,6 +31,8 @@ PROCESSED_FILE = BASE_DIR / "processed_videos.txt"
 RESULTS_FILE = BASE_DIR / "pipeline_results.json"
 RESULTS_KEY = "whisper"  # clave dentro de pipeline_results.json
 
+PRIORITY_STREAMERS = {"PuntoDeEntrada"}
+
 WHISPER_MODEL = "tiny"       # tiny | base | small | medium | large-v3
 WHISPER_DEVICE = "cpu"       # cpu | cuda
 WHISPER_THREADS = 4
@@ -193,6 +195,8 @@ def main():
         try:
             streamer, titulo = parse_meta(meta_path)
             log(f"  Streamer: {streamer}")
+            if streamer in PRIORITY_STREAMERS:
+                log(f"  ⚡ Streamer prioritario — transcript de referencia para comparación")
             log(f"  Título: {titulo[:80]}")
 
             text, info = transcribe_audio(audio_path, model)

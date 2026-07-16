@@ -21,6 +21,10 @@ MAX_PER_STREAMER = 50     # videos a revisar por canal
 MAX_DOWNLOAD = 3           # transcripciones a descargar por streamer
 CURL_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
 
+# Streamers prioritarios — incluso con subtítulos, descargar audio para Whisper
+PRIORITY_STREAMERS = {"PuntoDeEntrada"}
+AUDIOS_DIR = BASE_DIR / "audios_pendientes"
+
 STREAMERS = [
     {'name': 'ArgenTrader', 'channel': 'https://www.youtube.com/@ArgenTraderr', 'dir': 'ArgenTrader', 'extra': []},
     {'name': 'ZCoinTV',     'channel': 'https://www.youtube.com/@ZCoinTV',     'dir': 'ZCoinTV',     'extra': []},
@@ -122,6 +126,34 @@ def vtt_to_text(vtt_file):
         log(f"  → Error VTT: {e}")
         return ""
 
+# ─── Audio para Whisper ─────────────────────────────────────────
+def download_audio(video_id, streamer_name, titulo=""):
+    """Descarga audio para transcripción con Whisper (streamers prioritarios)."""
+    AUDIOS_DIR.mkdir(parents=True, exist_ok=True)
+    output_template = str(AUDIOS_DIR / f"{video_id}.%(ext)s")
+
+    cmd = [YT_DLP, "-f", "bestaudio[ext=m4a]/bestaudio",
+           "--output", output_template, "--quiet",
+           "--no-embed-thumbnail", "--no-playlist",
+           "--js-runtimes", "node", "--impersonate", "chrome",
+           f"https://www.youtube.com/watch?v={video_id}"]
+    if COOKIES_FILE.exists():
+        cmd = [YT_DLP, "--cookies", str(COOKIES_FILE)] + cmd[1:]
+
+    try:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        if r.returncode == 0:
+            for f in AUDIOS_DIR.glob(f"{video_id}.*"):
+                if f.suffix in [".m4a", ".webm", ".opus", ".mp3"]:
+                    log(f"  🎧 Audio descargado p/Whisper: {f.name}")
+                    meta_file = AUDIOS_DIR / f"{video_id}.meta"
+                    meta_file.write_text(f"{streamer_name}|{titulo}", encoding="utf-8")
+                    return True
+        log(f"  ⚠ Error descargando audio: {r.stderr[:80].strip()}")
+    except Exception as e:
+        log(f"  ⚠ Excepción audio: {e}")
+    return False
+
 # ─── Procesar streamer ──────────────────────────────────────────
 
 def process_streamer(streamer):
@@ -172,13 +204,18 @@ def process_streamer(streamer):
                 except:
                     pass
 
+        # Streamers prioritarios: también descargar audio para Whisper
+        streamer_name = streamer['name']
+        if streamer_name in PRIORITY_STREAMERS:
+            download_audio(video['id'], streamer_name, video['title'])
+
         processed.append({
             'video_id': video['id'],
             'title': video['title'],
             'url': video['url'],
             'transcript_length': transcript_len
         })
-        save_processed(video['id'], video['title'], streamer['name'])
+        save_processed(video['id'], video['title'], streamer_name)
         time.sleep(3)
 
     return {'streamer': streamer['name'], 'new_videos': len(processed), 'processed': processed, 'error': None}

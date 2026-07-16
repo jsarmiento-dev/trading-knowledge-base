@@ -15,6 +15,7 @@ COOKIES = BASE / "cookies/youtube.txt"
 PROCESSED = BASE / "processed_videos.txt"
 STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx", "PuntoDeEntrada"]
 AUDIOS_DIR = BASE / "audios_pendientes"
+PRIORITY_STREAMERS = {"PuntoDeEntrada"}
 
 def log(msg):
     print(f"[{datetime.now():%H:%M:%S}] {msg}")
@@ -176,6 +177,10 @@ def main():
                     descargados += 1
                     encontrado = True
                     break
+            # Streamers prioritarios: también descargar audio para Whisper
+            if encontrado and p['streamer'] in PRIORITY_STREAMERS:
+                log(f"   ⚡ Streamer prioritario — también descargando audio para Whisper...")
+                _download_audio(p['vid'], p['streamer'], p['titulo'])
             if not encontrado:
                 log(f"   ⚠ Sin subtítulos — descargando audio para Whisper...")
                 _download_audio(p['vid'], p['streamer'], p['titulo'])
