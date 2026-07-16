@@ -97,8 +97,8 @@ def main():
                 continue
             vid = parts[0].strip()
             fecha = parts[1].strip()
-            titulo = parts[2].strip()
-            streamer = parts[3].strip()
+            streamer = parts[-1].strip()
+            titulo = "|".join(parts[2:-1]).strip()
 
             if streamer not in STREAMERS:
                 continue
