@@ -122,39 +122,6 @@ def vtt_to_text(vtt_file):
         log(f"  → Error VTT: {e}")
         return ""
 
-# ─── Audio para Whisper ─────────────────────────────────────────
-def download_audio(video_id, streamer_name, titulo=""):
-    """Descarga audio para transcripción con Whisper (streamers prioritarios)."""
-    AUDIOS_DIR.mkdir(parents=True, exist_ok=True)
-    output_template = str(AUDIOS_DIR / f"{video_id}.%(ext)s")
-
-    cmd = [YT_DLP, "-f", "bestaudio[ext=m4a]/bestaudio",
-           "--output", output_template, "--quiet",
-           "--no-embed-thumbnail", "--no-playlist",
-           "--js-runtimes", "node:/home/ubuntu/.local/bin/node",
-           f"https://www.youtube.com/watch?v={video_id}"]
-    if COOKIES_FILE.exists():
-        cmd = [YT_DLP, "--cookies", str(COOKIES_FILE),
-               "-f", "bestaudio[ext=m4a]/bestaudio",
-               "--output", output_template, "--quiet",
-               "--no-embed-thumbnail", "--no-playlist",
-               "--js-runtimes", "node:/home/ubuntu/.local/bin/node",
-               f"https://www.youtube.com/watch?v={video_id}"]
-
-    try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-        if r.returncode == 0:
-            for f in AUDIOS_DIR.glob(f"{video_id}.*"):
-                if f.suffix in [".m4a", ".webm", ".opus", ".mp3"]:
-                    log(f"  🎧 Audio descargado p/Whisper: {f.name}")
-                    meta_file = AUDIOS_DIR / f"{video_id}.meta"
-                    meta_file.write_text(f"{streamer_name}|{titulo}", encoding="utf-8")
-                    return True
-        log(f"  ⚠ Error descargando audio: {r.stderr[:80].strip()}")
-    except Exception as e:
-        log(f"  ⚠ Excepción audio: {e}")
-    return False
-
 # ─── Procesar streamer ──────────────────────────────────────────
 
 def process_streamer(streamer):
