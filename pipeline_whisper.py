@@ -78,7 +78,7 @@ def transcribe_audio(audio_path, model):
     segments, info = model.transcribe(
         str(audio_path),
         beam_size=WHISPER_BEAM,
-        language="es",          # forzar español (la mayoría del contenido)
+        # No forzar idioma — detectar automáticamente (MambaFx=EN, resto=ES)
     )
 
     text_parts = []
