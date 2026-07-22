@@ -7,6 +7,11 @@ cd "$BASE"
 
 echo "[pipeline_completo] $(date '+%Y-%m-%d %H:%M:%S') — Iniciando"
 
+# FASE 0: Sincronizar con GitHub (traer audios/transcripts del PC)
+echo ""
+echo "═══ FASE 0: Git pull — sincronizar con PC ═══"
+git pull origin main 2>&1 || echo "[WARN] git pull falló — continuando con repo local"
+
 # FASE 1: Descubrir y descargar transcripciones
 echo ""
 echo "═══ FASE 1: Pipeline de descarga ═══"
