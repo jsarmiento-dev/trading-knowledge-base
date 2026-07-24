@@ -13,7 +13,7 @@ YT_DLP = r"C:\Users\USER\AppData\Local\Programs\Python\Python313\Scripts\yt-dlp.
 BASE = Path("C:/trading-knowledge-base")
 COOKIES = BASE / "cookies/youtube.txt"
 PROCESSED = BASE / "processed_videos.txt"
-STREAMERS = ["ArgenTrader", "ZCoinTV", "ScottFDX", "NovaTrader", "MambaFx", "PuntoDeEntrada"]
+STREAMERS = ["ZCoinTV", "ScottFDX", "MambaFx", "PuntoDeEntrada"]  # ArgenTrader + NovaTrader → PuntoDeEntrada
 AUDIOS_DIR = BASE / "audios_pendientes"
 PRIORITY_STREAMERS = {"PuntoDeEntrada"}
 

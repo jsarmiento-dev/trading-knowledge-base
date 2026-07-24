@@ -22,14 +22,12 @@ MAX_DOWNLOAD = 3           # transcripciones a descargar por streamer
 CURL_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
 
 STREAMERS = [
-    {'name': 'ArgenTrader', 'channel': 'https://www.youtube.com/@ArgenTraderr', 'dir': 'ArgenTrader', 'extra': []},
+    # ArgenTrader y NovaTrader se unieron para crear PuntoDeEntrada — ya no se monitorean por separado
     {'name': 'ZCoinTV',     'channel': 'https://www.youtube.com/@ZCoinTV',     'dir': 'ZCoinTV',     'extra': []},
     {'name': 'ScottFDX',    'channel': 'https://www.youtube.com/@ScottFDX',     'dir': 'ScottFDX',    'extra': []},
-    {'name': 'NovaTrader',  'channel': 'https://www.youtube.com/@nova-trader',  'dir': 'NovaTrader',
-     'extra': ['https://www.youtube.com/@nova-trader/streams', 'https://www.youtube.com/@nova-trader/shorts']},
     {'name': 'MambaFx',     'channel': 'https://www.youtube.com/@mambafx',      'dir': 'MambaFx',
      'extra': ['https://www.youtube.com/@mambafx/streams']},
-    # ⭐ FAVORITO: Nuevo canal de trading — pendiente de su crecimiento
+    # ⭐ FAVORITO: PuntoDeEntrada — el canal principal que unifica ArgenTrader + NovaTrader
     {'name': 'PuntoDeEntrada', 'channel': 'https://www.youtube.com/@PuntoDeEntradaYT', 'dir': 'PuntoDeEntrada', 'extra': []},
 ]
 
